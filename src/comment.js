@@ -1,5 +1,27 @@
+import { useState } from 'react';
+
 // component is a function that returns HTML
 function Comment() {
+
+    // caling an initial state of a variable on load = initial value = 15 here
+    // set up a state variable called points to track our points
+    // can set up multiple state variables for multiple things I am tracking
+    
+    const [points, setPoints] = useState(15);
+
+    const onUpvote = () => {
+        console.log('pointing up');
+        // change points here
+        setPoints(points + 1);
+        // does two things on click:
+        // points = points + 1
+        // re-render the comment component
+    }
+
+    const onDownvote = () => {
+        setPoints(points - 1)
+    }
+
     return (
         // <> and </> is a react Fragment, wraps code w/o adding another div over the whole thing
         <>
@@ -10,6 +32,17 @@ function Comment() {
             <p>
                 React is fun, yay for JSX
             </p>
+
+            <button
+            // add an onClick on buttons now that call a function
+                onClick = {onUpvote}
+            >
+                +
+            </button>
+            Points: {points}
+            <button
+                onClick = {onDownvote}
+            >-</button>
         </>
     )
 }

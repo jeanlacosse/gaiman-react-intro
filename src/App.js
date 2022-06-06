@@ -10,7 +10,7 @@ import greet from './greet.js/greet';
 // components return HTML
 function App (){
   return (
-    <div className="APP"> 
+    <div className="App"> 
     <h1>Comments App</h1>
 
 {/* here I can write the component as part of the html itself */}
