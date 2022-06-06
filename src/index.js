@@ -1,3 +1,4 @@
+// This is considered teh entry point where app.js is pulled in and all things are rendered
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
