@@ -6,7 +6,7 @@ function Comment() {
     // caling an initial state of a variable on load = initial value = 15 here
     // set up a state variable called points to track our points
     // can set up multiple state variables for multiple things I am tracking
-    
+
     const [points, setPoints] = useState(15);
 
     const onUpvote = () => {
@@ -35,6 +35,10 @@ function Comment() {
 
             <button
             // add an onClick on buttons now that call a function
+            // I could pass the entire function into the onCLick as well instead of defining it first if I wanted to
+            /* onClick { () => {
+                setPoints(points + 1) 
+            }}*/
                 onClick = {onUpvote}
             >
                 +
